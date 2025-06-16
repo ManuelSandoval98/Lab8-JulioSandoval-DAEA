@@ -42,4 +42,5 @@ namespace Lab8_JulioSandoval.Controllers
             return Ok("Reporte generado en Descargas.");
         }
     }
+    
 }
