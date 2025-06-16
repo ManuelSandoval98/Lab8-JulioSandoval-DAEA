@@ -202,3 +202,4 @@ C:\Users\HP\RiderProjects\Lab8-JulioSandoval\Lab8-JulioSandoval\bin\Debug\net9.0
 C:\Users\HP\RiderProjects\Lab8-JulioSandoval\Lab8-JulioSandoval\bin\Debug\net9.0\SixLabors.Fonts.dll
 C:\Users\HP\RiderProjects\Lab8-JulioSandoval\Lab8-JulioSandoval\bin\Debug\net9.0\System.IO.Packaging.dll
 C:\Users\HP\RiderProjects\Lab8-JulioSandoval\Lab8-JulioSandoval\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\HP\RiderProjects\Lab8-JulioSandoval\Lab8-JulioSandoval\obj\Debug\net9.0\Lab8-JulioSandoval.sourcelink.json

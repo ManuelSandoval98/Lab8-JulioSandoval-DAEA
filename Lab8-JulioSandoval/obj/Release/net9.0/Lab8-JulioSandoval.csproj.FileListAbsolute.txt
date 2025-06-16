@@ -202,3 +202,4 @@ C:\Users\HP\RiderProjects\Lab8-JulioSandoval\Lab8-JulioSandoval\obj\Release\net9
 C:\Users\HP\RiderProjects\Lab8-JulioSandoval\Lab8-JulioSandoval\obj\Release\net9.0\Lab8-JulioSandoval.pdb
 C:\Users\HP\RiderProjects\Lab8-JulioSandoval\Lab8-JulioSandoval\obj\Release\net9.0\Lab8-JulioSandoval.genruntimeconfig.cache
 C:\Users\HP\RiderProjects\Lab8-JulioSandoval\Lab8-JulioSandoval\obj\Release\net9.0\ref\Lab8-JulioSandoval.dll
+C:\Users\HP\RiderProjects\Lab8-JulioSandoval\Lab8-JulioSandoval\obj\Release\net9.0\Lab8-JulioSandoval.sourcelink.json

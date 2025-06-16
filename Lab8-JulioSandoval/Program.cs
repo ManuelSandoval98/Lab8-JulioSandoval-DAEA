@@ -22,16 +22,14 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+
     app.UseSwagger();
     app.UseSwaggerUI();
-}
-else
-{
+
+
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
-}
+
 
 app.UseHttpsRedirection();
 app.UseRouting();
