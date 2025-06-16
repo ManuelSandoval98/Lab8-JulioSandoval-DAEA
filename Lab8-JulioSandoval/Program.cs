@@ -5,37 +5,48 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Agregar servicios al contenedor
 builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Configurar la conexión a PostgreSQL
+// Configurar conexión a PostgreSQL desde appsettings.json o variables de entorno (Render)
 builder.Services.AddDbContext<LinqExampleContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Registrar tus servicios de negocio
+// Inyectar servicios de negocio
 builder.Services.AddScoped<LinqService>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Verificar si la conexión a la base de datos funciona
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<LinqExampleContext>();
+    try
+    {
+        db.Database.CanConnect();
+        Console.WriteLine("✅ Conexión a la base de datos establecida correctamente.");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"❌ Error al conectar con la base de datos: {ex.Message}");
+    }
+}
 
-    app.UseSwagger();
-    app.UseSwaggerUI();
+// Configurar el middleware HTTP
+app.UseSwagger();
+app.UseSwaggerUI();
 
-
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
-
+app.UseExceptionHandler("/Home/Error");
+app.UseHsts();
 
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseAuthorization();
 
-app.MapStaticAssets();
+app.MapStaticAssets(); // Esto aplica si tienes assets como CSS/JS
 
 app.MapControllerRoute(
         name: "default",
